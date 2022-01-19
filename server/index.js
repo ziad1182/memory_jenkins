@@ -13,7 +13,7 @@ app.use(cors());
 
 app.use("/posts", postRoutes);
 
-const CONNECTION_URL = "mongodb://localhost:27017/test";
+const CONNECTION_URL = "mongodb://mongo:27017/test";
 const PORT = process.env.PORT || 5000;
 
 mongoose
