@@ -29,7 +29,10 @@ pipeline {
         }
 
         stage('build') {
-            sh 'npm run dev &'
+            steps {
+                sh 'npm run dev &'
+            }
+            
         }
     }
 }
