@@ -34,5 +34,11 @@ pipeline {
             }
             
         }
+
+        stage('Test'){
+            steps {
+                sh "curl http://localhost:3006"
+            }
+        }
     }
 }
