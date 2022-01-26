@@ -14,15 +14,14 @@ pipeline {
 
         stage('install client dependencies') {
             steps {
-                sh 'cd client'
+                sh './client'
                 sh 'npm install'
             }
         }
 
         stage('install server dependencies') {
             steps {
-                sh 'cd ..'
-                sh 'cd server'
+                sh '../server'
                 sh 'npm install'
             }
             
@@ -30,7 +29,6 @@ pipeline {
 
         stage('build') {
             steps {
-                sh 'cd ..'
                 sh 'npm run dev &'
             }
             
